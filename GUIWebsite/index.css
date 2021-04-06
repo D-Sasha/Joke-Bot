@@ -1,0 +1,18 @@
+* {
+  font-family: "Open Sans", Helvetica, "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+.chat-container {
+  margin: 100px auto;
+  width: 360px;
+  z-index: 100;
+  box-shadow: 0 0 3em black;
+}
+
+@media (max-width: 400px) {
+  .chat-container {
+    margin: 20px 10px;
+    width: auto;
+  }
+}

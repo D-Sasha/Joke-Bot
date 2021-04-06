@@ -1,0 +1,61 @@
+version: "2.0"
+rules:
+- rule: Implementation of the Two-Stage-Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+- rule: Say hi and ask user for mood anytime the user says hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askmood
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- rule: Replymood when user replies mood
+  steps:
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian
+  - action: utter_consent
+- rule: userconsent handling agree
+  steps:
+  - intent: agreetojokes
+  - action: utter_agreetojokes
+  - action: action_tell_joke
+- rule: userconsent handling deny
+  steps:
+  - intent: denyjokes
+  - action: utter_denyjokes
+  - action: utter_goodbye
+- rule: tell joke whenever user asks for it
+  steps:
+  - intent: ask_joke
+  - action: utter_agreetojokes
+  - action: action_tell_joke
+- rule: handle feedback
+  steps:
+  - intent: feedback
+  - action: action_handle_feedback
+  - action: action_tell_joke
+- rule: Stop telling jokes when the user says they are finished
+  steps:
+  - intent: finished
+  - action: utter_finished
+- rule: give memes when user asks for something else
+  steps:
+  - intent: ask_for_different_topic
+  - action: utter_bot_got_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+- rule: give more memes when user wants more
+  steps:
+  - intent: ask_more_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+- rule: handle out of bound responses
+  steps:
+  - intent: out_of_bounds
+  - action: utter_outofbounds_response

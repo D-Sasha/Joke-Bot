@@ -1,0 +1,278 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hey!
+    - Hi!
+    - Hello
+    - Good Day
+    - Good morning
+    - What's up
+    - Yo
+    - Good Evening
+    - Hey you
+    - Good afternoon
+    - Sup
+    - Hey
+    - Morning
+    - Hi
+- intent: replymood
+  examples: |
+    - I'm good
+    - I'm great
+    - I'm okay
+    - I'm ok
+    - Doing alright
+    - Doing good
+    - Good
+    - Good!
+    - Feeling okay
+    - Feeling ok
+    - Feeling good
+    - Feeling great
+    - I'm alright
+    - Great!
+    - I'm good!
+- intent: askmood
+  examples: |
+    - how are you?
+    - how are you feeling?
+    - and you?
+    - what's up with you?
+    - how are you today?
+    - you doing good?
+    - you doing okay?
+    - you alright?
+    - how about you?
+    - how are you doing?
+    - how have you been?
+    - what's going on?
+- intent: denyjokes
+  examples: |
+    - Maybe another time, sorry
+    - Busy today, maybe another time
+    - Not today, maybe sometime soon
+    - Let's schedule for another time, so I can properly hear them
+    - Let's do another time
+    - No
+    - Not today
+    - Maybe not
+    - Not right now
+    - Maybe another time
+    - Maybe later
+    - Some other time
+- intent: agreetojokes
+  examples: |
+    - Yea sure, I'm ready to hear some [jokes]{"entity": "jokeformat"}
+    - Lets hear them!
+    - I'm ready for a laugh, let's hear them
+    - Yes, I would love to hear some [jokes]{"entity": "jokeformat"}!
+    - Let's do it!
+    - Excellent idea, Let's hear them!
+    - Yeah let's hear it
+    - Yeah let's hear them
+    - Sure
+    - Yeah
+    - Yes
+    - Let's go
+    - Alright sure
+    - Let's do it
+    - Shoot
+    - I would love that
+    - I'm in the mood
+    - I'm in the mood for a laugh
+    - I want to laugh
+- intent: finished
+  examples: |
+    - Loved hearing the [jokes]{"entity": "jokeformat"} today
+    - Had a fun time hearing and talking about [jokes]{"entity": "jokeformat"} today!
+    - Was really fun seeing you today and hearing your [jokes]{"entity": "jokeformat"}!
+    - Was nice to see you today and hear some [jokes]{"entity": "jokeformat"}!
+    - Great seeing you and hearing the [jokes]{"entity": "jokeformat"} today!
+    - Had a really fun time today!
+    - Well I think this is it for me
+    - I think we're done now
+    - I don't want to hear anymore [jokes]{"entity": "jokeformat"}
+    - I think I'm good now
+    - That's enough now
+    - It was good to hear all your [jokes]{"entity": "jokeformat"}
+    - I don't think I can laugh anymore
+    - Are we done here?
+    - Do you want to stop?
+    - I think I've heard enough
+    - It's getting late
+    - I should be on my way
+    - You can finish your jokes next time
+    - I'm getting tired
+    - I should head out
+    - I should be heading out now
+- intent: ask_joke
+  examples: |
+    - tell me a [joke]{"entity": "jokeformat"}
+    - tell me a [silly thing]{"entity": "jokeformat"}
+    - show me [the funny]{"entity": "jokeformat"}
+    - say something funny
+    - run a [joke]{"entity": "jokeformat"} by me
+    - run a [hiarious thing]{"entity": "jokeformat"} by me
+    - Tell me Another
+- intent: feedback
+  examples: |
+    - That was funny
+    - Ahahah
+    - HAHAHA
+    - LMAO
+    - LOL
+    - BRUH
+    - Amazing
+    - ROFL
+    - rofl
+    - That was Great
+    - That was good
+    - That was a good one
+    - That was a funny one
+    - funny
+    - Nice [joke]{"entity": "jokeformat"}
+    - Nice one!
+    - Good [joke]{"entity": "jokeformat"}
+    - Good one
+    - Nice
+    - Well Played
+    - Dude that was amazing!
+    - haha
+    - lol
+    - lmao
+    - HAHAH
+    - Good one!
+    - that was a funny [joke]{"entity": "jokeformat"}
+    - I liked that one
+    - Meh
+    - Not funny
+    - You could do better
+    - Try harder
+    - Not there yet
+    - try again
+    - ...
+    - Nope
+    - That's dumb
+    - Stupid
+    - I don't like this
+    - why?
+    - Do better!
+    - Yawn
+    - Not Impressed
+    - Bad!
+    - Not good
+    - That wasn't funny
+    - eh
+    - it was okay
+    - it was ok
+    - boo
+    - I didn't like that one
+    - That one wasn't good
+    - that wasn't a funny [joke]{"entity": "jokeformat"}
+    - that was a bad [joke]{"entity": "jokeformat"}
+    - that one was alright
+    - that one was okay
+    - terrible
+    - very bad
+- intent: goodbye
+  examples: |
+    - It was nice seeing you
+    - Goodbye!
+    - Bye!
+    - See you another time!
+    - Have a good night!
+    - bye bye!
+    - Can't wait till we meet up next time!
+    - Have a nice day!
+    - Hey, see you around!
+    - Take Care!
+    - goodbye!
+    - See you
+    - See ya
+- intent: ask_for_different_topic
+  examples: |
+    - What else do you have?
+    - What else do you got?
+    - Do you have anything else funny?
+    - Do you have [memes]{"entity": "jokeformat"}?
+    - What about [memes]{"entity": "jokeformat"}?
+    - Is there anything else you got?
+    - What else can you do?
+    - You got any [memes]{"entity": "jokeformat"}?
+    - Show me some [memes]{"entity": "jokeformat"}
+    - You should show me [memes]{"entity": "jokeformat"}
+    - You got any [mem]{"entity": "jokeformat"}?
+    - Show me some [mem]{"entity": "jokeformat"}
+    - You should show me [mem]{"entity": "jokeformat"}
+    - You got any [maymay]{"entity": "jokeformat"}?
+    - Show me some [maymay]{"entity": "jokeformat"}
+    - You should show me [maymay]{"entity": "jokeformat"}
+    - You should show me something else
+    - You got anything else?
+    - What else can you do?
+    - Show me what else you got
+- intent: ask_more_memes
+  examples: |
+    - Show me more
+    - You got more [memes]{"entity": "jokeformat"}?
+    - You got any more?
+    - I want to see more
+    - Yes, I'd like to see more
+    - Sure I want to see more
+    - Can you show me more?
+    - I'd like to see more
+    - I sure would like to 
+    - I want more [memes]{"entity": "jokeformat"}
+    - Let's see more [memes]{"entity": "jokeformat"}
+    - What other [memes]{"entity": "jokeformat"} do you have?
+    - I want to see more [memes]{"entity": "jokeformat"}
+    - I want more [mem]{"entity": "jokeformat"}
+    - Let's see more [mem]{"entity": "jokeformat"}
+    - What other [mem]{"entity": "jokeformat"} do you have?
+    - I want to see more [mem]{"entity": "jokeformat"}
+    - I want more [maymay]{"entity": "jokeformat"}
+    - Let's see more [maymay]{"entity": "jokeformat"}
+    - What other [maymay]{"entity": "jokeformat"} do you have?
+    - I want to see more [maymay]{"entity": "jokeformat"}
+- intent: out_of_bounds
+  examples: |
+    - What's 2+2?
+    - Can I order a [pizza]{"entity": "food"}?
+    - What's your height?
+    - Why do you exist?
+    - What came first, the [chicken]{"entity": "food"} or the [egg]{"entity": "food"}?
+    - How many cm in a foot?
+    - Ooh OOh AAh AH MONKE
+- lookup: food
+  examples: |
+    - egg
+    - chicken
+    - pizza
+    - ham
+    - cake
+    - sandwich
+    - burger
+    - pasta
+    - spaghetti
+    - baguette
+    - steak
+- synonym: joke
+  examples: |
+    - funny joke
+    - silly thing
+    - hilarious thing
+    - banter
+    - one-liner
+    - one liner
+    - story
+    - funny story
+    - jke
+    - jok
+- synonym: meme
+  examples: |
+    - meemee
+    - internet meme
+    - internet post
+    - maymay
+    - mem

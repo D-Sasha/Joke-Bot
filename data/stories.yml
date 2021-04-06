@@ -1,0 +1,122 @@
+stories:
+- story: consent deny
+  steps:
+  - intent: greet #user says hi
+  - action: utter_greet #bot replies with hi
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian #bot tells user about being a comedian
+  - action: utter_consent #bot ask for consent
+  - intent: denyjokes #user says no to jokes
+  - slot_was_set:
+    - gives_consent: False
+  - action: utter_denyjokes #bot says ok
+  - action: utter_goodbye #bot says bye
+
+- story: consent_agree
+  steps:
+  - intent: greet #user says hi
+  - action: utter_greet #bot replies with hi
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian #bot tells user about being a comedian
+  - action: utter_consent #bot ask for consent
+  - intent: agreetojokes #users says yes to jokes
+  - slot_was_set:
+    - gives_consent: True
+  - action: utter_agreetojokes #bot says yay
+  - action: action_tell_joke #bot gives bad one liner
+
+- story: endconvo
+  steps:
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: sample full convo agree to jokes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian
+  - action: utter_consent
+  - intent: agreetojokes
+  - slot_was_set:
+    - gives_consent: True
+  - action: utter_agreetojokes
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_bad
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_bad
+  - action: action_tell_joke
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story : sample full convo agree to jokes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian
+  - action: utter_consent
+  - intent: agreetojokes
+  - slot_was_set:
+    - gives_consent: True
+  - action: utter_agreetojokes
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_bad
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - intent: feedback
+  - action: utter_feedback_bad
+  - action: action_tell_joke
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot gives memes
+  steps:
+  - intent: ask_for_different_topic
+  - action: utter_bot_got_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+  - intent: ask_more_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+  - intent: ask_more_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
+  - action: utter_goodbye
