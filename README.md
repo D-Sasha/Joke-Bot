@@ -55,7 +55,11 @@ _**Aside**: The current GUI for the bot will use text-to-speech, so don't be ala
 ## Issues
  Feel free to raise any issues you might encounter on the repository, and we'll be happy to help! :)
 
-## New Features for A3
+## New Features for Individual Project
+  - ### Google Translate API
+    I've implemented a Google Translate API. The bot will take an input from the user and translate it into spanish. 
+
+## Features for A3
  - ### Graphical User interface
    For A3, we implemented a simple GUI for Rasa chatbots, that was adapted from [Scalable Minds' Chatroom Repository](https://github.com/scalableminds/chatroom).
    This GUI has the typical text input field through which the usercan speak to our bot, and it also has a speak-to-talk option, but only for Chrome.
