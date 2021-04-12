@@ -9,6 +9,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import secrets
+from translate import Translate
 
 
 class ActionTellJoke(Action):
@@ -48,4 +49,17 @@ class ActionHandleFeedback(Action):
             dispatcher.utter_message(response="utter_feedback_bad")  # If feedback is neutral or negative utter bad
             # feedback
 
+        return []
+
+class ActionTranslateLastMessage(Action):
+    
+    def name(self) -> Text:
+        return "action_translate_last_message"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any],) -> List[Dict[Text, Any]]:
+        
+        contents = tracker.latest_message['text']
+        message = Translate(contents)
+        dispatcher.utter_template("utter_translated", tracker, message=message)
+        
         return []

@@ -1,5 +1,20 @@
 version: "2.0"
 nlu:
+- intent: translate
+  examples: |
+    - can you translate this?
+    - can you translate my next message?
+    - translate my next message
+    - translate what im going to say
+    - translate this 
+    - translate
+    - please translate my next message
+    - you should translate this
+    - translate my next message
+    - can you translate this
+- intent: message
+  examples: |
+   - this message
 - intent: greet
   examples: |
     - Hey!

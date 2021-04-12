@@ -31,6 +31,10 @@ intents:
     use_entities: true
 - nlu_fallback:
     use_entities: true
+- translate:
+    use_entities: true
+- message:
+    use_entities: true
 entities:
 - jokeformat
 - food
@@ -41,6 +45,12 @@ slots:
     auto_fill: true
     influence_conversation: true
 responses:
+  utter_translate:
+  - text: |
+      What would you like me to translate?
+  utter_translated:
+  - text: |
+      Your translated message is {message}
   utter_greet:
   - text: |
       Hey!
@@ -507,7 +517,10 @@ actions:
 - utter_replymood
 - utter_default
 - utter_ask_rephrase
+- utter_translate
+- utter_translated
 - action_tell_joke
 - action_handle_feedback
+- action_translate_last_message
 forms: {}
 e2e_actions: []

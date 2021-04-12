@@ -1,5 +1,14 @@
 version: "2.0"
 rules:
+- rule: translate start
+  steps:
+  - intent: translate
+  - action: utter_translate
+- rule: translate user request
+  steps:
+  - action: utter_translate
+  - intent: message 
+  - action: action_translate_last_message
 - rule: Implementation of the Two-Stage-Fallback
   steps:
   - intent: nlu_fallback

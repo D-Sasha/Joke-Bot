@@ -1,4 +1,11 @@
 stories:
+- story: translation
+  steps:
+  - intent: translate #users asks for translation
+  - action: utter_translate #bot asks user what they would like to translate
+  - intent: message
+  - action: action_translate_last_message
+  
 - story: consent deny
   steps:
   - intent: greet #user says hi
