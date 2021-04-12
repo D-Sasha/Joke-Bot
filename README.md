@@ -58,6 +58,8 @@ _**Aside**: The current GUI for the bot will use text-to-speech, so don't be ala
 ## New Features for Individual Project
   - ### Google Translate API
     I've implemented a Google Translate API. The bot will take an input from the user and translate it into spanish. 
+    Added: translate.py
+    Edited: actions.py, nlu.yml, stories.yml, rules.yml, domain.yml
 
 ## Features for A3
  - ### Graphical User interface
