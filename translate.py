@@ -7,7 +7,7 @@ def Translate(message):
     headers = {
         'content-type': "application/x-www-form-urlencoded",
         'accept-encoding': "application/gzip",
-        'x-rapidapi-key': "b9e8193e47msh9c1c5b4c6dee4e0p18a4ebjsn6bca5efc53ef",
+        'x-rapidapi-key': "INSERT_KEY_HERE",
         'x-rapidapi-host': "google-translate1.p.rapidapi.com"
         }
     
